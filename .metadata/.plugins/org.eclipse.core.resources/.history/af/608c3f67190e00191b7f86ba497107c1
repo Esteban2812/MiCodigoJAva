@@ -1,0 +1,21 @@
+package example.kafka.util;
+
+import java.util.Properties;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import example.kafka.entities.*;
+
+import java.util.*;
+
+public class main {
+	private Properties kafkaProps = new Properties();
+	
+	
+	
+	ObjectMapper mapper = new ObjectMapper();
+	
+	Producto producto = new Producto();
+	
+	mapper.writeValue(new File("c:\\file.json"), producto);
+}

@@ -1,0 +1,5 @@
+package example.kafka.entities;
+
+public class producto {
+
+}

@@ -1,0 +1,18 @@
+package example.kafka;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import example.kafka.util.*;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println("Starting serialization");
+        
+        
+    }
+}

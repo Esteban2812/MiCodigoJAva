@@ -1,0 +1,17 @@
+package example.kafka.util;
+
+import java.util.Properties;
+
+import example.kafka.entities.*;
+
+import java.util.*;
+
+public class main {
+	private Properties  kafkaProps = new Properties();
+	
+	
+	
+	Producto producto = new Producto();
+	
+		
+}

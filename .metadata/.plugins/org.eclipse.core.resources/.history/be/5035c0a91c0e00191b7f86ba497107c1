@@ -1,0 +1,33 @@
+package example.kafka.util;
+
+import java.util.Properties;
+
+import com.fasterxml.jackson.core.JsonGenerationException;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import example.kafka.entities.*;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.*;
+
+public class main {
+	private Properties kafkaProps = new Properties();
+	
+	
+	public String convertirAJson() throws JsonGenerationException, JsonMappingException, IOException {
+	
+	String jsonFile="C:\\Users\\Esteban\\Documents\\file.json";
+	
+	ObjectMapper mapper = new ObjectMapper();
+	
+	Producto producto = new Producto(10,"Traduccion frances/italiano");
+	
+	mapper.writeValue(new File(jsonFile), producto);
+	
+	return jsonFile;
+	
+	}
+	
+}
