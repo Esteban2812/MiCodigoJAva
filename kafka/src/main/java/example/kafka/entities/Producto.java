@@ -4,7 +4,7 @@ public class Producto {
 	private int codigoProducto;
 	private String descripcionProducto;
 	
-	
+	public Producto() {}
 	
 	public Producto(int codigoProducto, String descripcionProducto) {
 		super();
@@ -24,6 +24,8 @@ public class Producto {
 		this.descripcionProducto = descripcionProducto;
 	}
 	
-	
+	public String toString() {
+		return "Producto: " + this.codigoProducto + "-" + this.descripcionProducto;
+	}
 	
 }
