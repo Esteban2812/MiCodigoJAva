@@ -20,8 +20,16 @@ public class main {
 	
 	public String convertirAJson() throws JsonGenerationException, JsonMappingException, IOException {
 	
-	String jsonFile="C:\\Users\\Esteban\\Documents\\file.json";
+	System.out.println("OS  = " + System.getProperty("os.name"));	
+		
+	String jsonFile;
 	
+	if(System.getProperty("os.name").compareTo("Linux") == 0) 
+		jsonFile="/home/cambiante/file.json";
+	else
+		jsonFile="C:\\Users\\Esteban\\Documents\\file.json";	
+	
+	System.out.println("json file="+jsonFile);
 	ObjectMapper mapper = new ObjectMapper();
 	
 	Producto producto = new Producto(10,"Traduccion frances/italiano");
@@ -47,9 +55,14 @@ public class main {
 		}
 	
 	public Producto convertirDeArchivoAObjeto() throws JsonParseException, JsonMappingException, IOException {
-		String jsonFile="C:\\Users\\Esteban\\Documents\\file-copy.json";
+		String jsonFile;
+		if(System.getProperty("os.name").compareTo("Linux") == 0)
+			jsonFile="/home/cambiante/file-copy.json";
+		else
+			jsonFile="C:\\Users\\Esteban\\Documents\\file-copy.json";
 		ObjectMapper mapper = new ObjectMapper();
-		Producto oProducto = mapper.readValue(new File(jsonFile), Producto.class);
+		Producto oProducto = (Producto) mapper.readValue(new File(jsonFile), Producto.class);
+
 		return oProducto;
 		
 	}
